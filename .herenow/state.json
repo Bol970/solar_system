@@ -1,0 +1,13 @@
+{
+  "publishes": {
+    "solar-cherry-m24p": {
+      "siteUrl": "https://solar-cherry-m24p.here.now/"
+    },
+    "tender-valley-rq2k": {
+      "siteUrl": "https://tender-valley-rq2k.here.now/",
+      "claimToken": "1fe114268b61b08ec8f954103d85eebe23a4ba505a9ffeb2f94ff865b0ab1456",
+      "claimUrl": "https://here.now/claim?slug=tender-valley-rq2k&token=1fe114268b61b08ec8f954103d85eebe23a4ba505a9ffeb2f94ff865b0ab1456",
+      "expiresAt": "2026-04-14T07:39:56.813Z"
+    }
+  }
+}

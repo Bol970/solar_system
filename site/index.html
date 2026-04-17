@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Солнечная система | Three.js Practice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <main class="space-stage">
+      <canvas id="scene" aria-label="Полноэкранная схема солнечной системы"></canvas>
+      <div class="vignette" aria-hidden="true"></div>
+
+      <header class="stage-copy">
+        <h1>Солнечная система</h1>
+        <p class="lead">
+          Полноэкранная упрощённая схема: Солнце в центре, восемь орбит, мягкая
+          анимация движения и акцент на чистой визуальной структуре.
+        </p>
+        <p class="note">Масштабы и расстояния намеренно упрощены ради читаемости.</p>
+      </header>
+
+      <div class="control-strip">
+        <button class="button" id="reset-view" type="button">Сбросить вид</button>
+        <p>Drag для поворота, колесо для масштаба.</p>
+      </div>
+
+      <aside class="planet-panel" aria-live="polite">
+        <p class="legend-title">Фокус</p>
+        <h2 class="panel-name" id="planet-name">Выберите орбиту</h2>
+        <p class="planet-subtitle" id="planet-subtitle">
+          Кликни по Солнцу, орбите, планете или спутнику, чтобы перевести объект в центр сцены.
+        </p>
+        <p class="planet-description" id="planet-description">
+          После выбора справа появится короткая справка, а камера плавно приблизится к
+          выбранной планете.
+        </p>
+        <ul class="fact-list" id="planet-facts">
+          <li>
+            <span>Режим</span>
+            <strong>Интерактивный обзор</strong>
+          </li>
+          <li>
+            <span>Клик</span>
+            <strong>Орбита или планета</strong>
+          </li>
+          <li>
+            <span>Сброс</span>
+            <strong>Кнопка снизу слева</strong>
+          </li>
+        </ul>
+        <div class="planet-picker" id="planet-picker" aria-label="Быстрый выбор планеты"></div>
+        <section class="moon-section" id="moon-section">
+          <p class="section-label" id="moon-section-title">Спутники</p>
+          <div class="moon-picker" id="moon-picker" aria-label="Выбор спутника"></div>
+        </section>
+      </aside>
+
+      <p class="scene-fallback" id="scene-fallback">
+        Если 3D-сцена не появилась, браузер не загрузил WebGL или модуль Three.js.
+      </p>
+    </main>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
